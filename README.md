@@ -37,7 +37,7 @@ cat $HOME/popm-address.json
 * Các bạn vào Discord Faucet nhé [Discord](https://discord.gg/hemixyz) 
 * Kiểm tra tBTC đã vào ví chưa rồi làm bước tiếp theo
 
-## Start Miner
+## Khởi chạy Miner
 ```bash
 export POPM_BTC_PRIVKEY= nhập private_key của bạn
 export POPM_STATIC_FEE=50
@@ -52,7 +52,7 @@ export POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
 
 
 
-# View your points
+# Kiểm tra points
 *  Hiện tại, khoản thanh toán token tHEMI đóng vai trò là điểm khai thác Hemi PoP. Bạn sẽ nhận được token tHEMI cho mỗi khối bạn khai thác bằng Hemi Pop Node của mình
 *  Để xem số dư tHEMI của bạn, bạn có thể cần thêm địa chỉ hợp đồng 0x4200000000000000000000000000000000000042dưới dạng "mã thông báo tùy chỉnh" vào ví metamask của mình trên Mạng Hemi Sepolia.
 *  Bạn cũng có thể nhập private_keysố dư tHEMI tại đây để kiểm tra: https://pop-miner.hemi.xyz/
