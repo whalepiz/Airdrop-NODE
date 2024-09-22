@@ -1,14 +1,14 @@
 # Hemi Miner Incentivized Testnet
 
 ![image](https://github.com/user-attachments/assets/996c7d95-8be3-457b-a920-270fc337c6e1)
-> Hemi is a modular protocol for superior scaling, security, and interoperability, powered by Bitcoin and Ethereum.
+> HHemi là Giao thức Bitcoin-Ethereum Modular, Hemi Labs đã huy động được 15 triệu đô la trong vòng gọi vốn Seed do Binance Labs Fund dẫn đầu.
  
 #
 
-* For non-Node participants, you can join  pilot program [here](https://points.absinthe.network/hemi/) : Use my code to Enter: `a8389da2`
-* You can run miner using web browser on windows here: https://pop-miner.hemi.xyz/
+* Đối với các bạn không chạy Node, thì có thể tham gia chương trình kiếm  Point [TRUY CẬP](https://points.absinthe.network/hemi/) : Nhập mã giới thiệu: `2c19e0ca`
+* Bạn cũng có thể Miner  bằng trình duyệt web trên Windows tại đây:: https://pop-miner.hemi.xyz/
 
-## Install Miner on Linux
+## Cài đặt Miner trên Linux
 **1. Download Binaries**
 ```bash
 wget https://github.com/hemilabs/heminetwork/releases/download/v0.4.3/heminetwork_v0.4.3_linux_amd64.tar.gz
@@ -20,48 +20,40 @@ tar -xvf heminetwork_v0.4.3_linux_amd64.tar.gz && rm heminetwork_v0.4.3_linux_am
 ```
 
 ## Wallet
-**1. Create tBTC wallet**
+**1. Tạo ví tBTC**
 ```bash
 ./keygen -secp256k1 -json -net="testnet" > ~/popm-address.json
 ```
 
-**2. Get tBTC address**
+**2. Lấy thông tin ví tBTC**
 ```bash
 cat $HOME/popm-address.json
 ```
-* Save the output
-* `pubkey_hash` is your tBTC address
+* Lưu lại thông Wallet
+* `pubkey_hash` là địa chỉ tBTC của bạn
+* `private_key` là để bạn có thể nhập ví vào Metamask
 
-**3. Fund your wallet**
-* Get tBTC faucet in [Discord](https://discord.gg/hemixyz) for your bitcoin wallet
-* Check your txhash in explorer until it get CONFIRMED
+**3. Nạp tBTC vào ví**
+* Các bạn vào Discord Faucet nhé [Discord](https://discord.gg/hemixyz) 
+* Kiểm tra tBTC đã vào ví chưa rồi làm bước tiếp theo
 
 ## Start Miner
-**1. Create screen**
 ```bash
-screen -S hemi
-```
-
-**2. Replace your private key with `PRIVATE_KEY`**
-```bash
-echo 'export POPM_BTC_PRIVKEY=PRIVATE_KEY' >> ~/.bashrc
-echo 'export POPM_STATIC_FEE=50' >> ~/.bashrc
-echo 'export POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public' >> ~/.bashrc
-source ~/.bashrc
-```
-
-**3. Start your node**
-```bash
+export POPM_BTC_PRIVKEY= nhập private_key của bạn
+export POPM_STATIC_FEE=50
+export POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
 ./popmd
 ```
 
+**. Node hoạt động**
+
+
 ![image](https://github.com/user-attachments/assets/76dc9867-a0b3-4d11-9baf-cd1d5a94f695)
 
-- To minizme screen: `CTRL+A+D`
-- To return screen `screen -r hemi`
+
 
 # View your points
-* Currently, the tHEMI token payout serves as Hemi PoP mining points. You will get tHEMI tokens for each block you min with your Hemi Pop Node
-* To view your tHEMI balance, you may need to add the contract address `0x4200000000000000000000000000000000000042` as a "custom token" in your metamask wallet on Hemi Sepolia Network.
-* You can also import your `private_key` here to check tHEMI balance: https://pop-miner.hemi.xyz/
-* Gaining tHEMI is delayed rn, you can check later
+*  Hiện tại, khoản thanh toán token tHEMI đóng vai trò là điểm khai thác Hemi PoP. Bạn sẽ nhận được token tHEMI cho mỗi khối bạn khai thác bằng Hemi Pop Node của mình
+*  Để xem số dư tHEMI của bạn, bạn có thể cần thêm địa chỉ hợp đồng 0x4200000000000000000000000000000000000042dưới dạng "mã thông báo tùy chỉnh" vào ví metamask của mình trên Mạng Hemi Sepolia.
+*  Bạn cũng có thể nhập private_keysố dư tHEMI tại đây để kiểm tra: https://pop-miner.hemi.xyz/
+   Việc đạt được tHEMI bị trì hoãn ngay bây giờ, bạn có thể kiểm tra sau
