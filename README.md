@@ -38,6 +38,11 @@ cat $HOME/popm-address.json
 * Kiểm tra tBTC đã vào ví chưa rồi làm bước tiếp theo
 
 ## Khởi chạy Miner
+*Tạo screen 
+```bash
+screen -S hemi
+```
+
 ```bash
 export POPM_BTC_PRIVKEY= nhập private_key của bạn
 export POPM_STATIC_FEE=50
