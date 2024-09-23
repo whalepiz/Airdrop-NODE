@@ -42,7 +42,7 @@ cat $HOME/popm-address.json
 ```bash
 screen -S hemi
 ```
-
+*Chạy Miner 
 ```bash
 export POPM_BTC_PRIVKEY= nhập private_key của bạn
 export POPM_STATIC_FEE=50
